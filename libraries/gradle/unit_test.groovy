@@ -9,7 +9,7 @@ def call(){
             def timeout = config.unit_test_timeout ?: 30
             
             try{
-                timeout(time: 30, unit: 'MINUTES') { 
+                timeout time: 30,  unit: 'MINUTES', { 
                     docker.image("${gradle_container_image}").inside {   
                         sh "./gradlew test"
                         echo "build dir contents:"
