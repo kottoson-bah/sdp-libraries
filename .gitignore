@@ -8,6 +8,6 @@ _build
 .classpath
 build 
 bin
-gradle
+/gradle
 docs/html
 docs/node_modules
