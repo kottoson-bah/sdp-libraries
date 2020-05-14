@@ -1,5 +1,4 @@
-def call(){
-  void call(){
+void call(){
   
   def modules = [:] 
   
@@ -35,5 +34,4 @@ def call(){
       }
   } 
 
-}
 }
