@@ -8,7 +8,7 @@ import org.boozallen.plugins.jte.init.dsl.PipelineConfigurationDsl
 
 @Init
 void call(context){
-    TemplateConfigObject aggregated = new PipelineConfigurationObject(
+    PipelineConfigurationObject aggregated = new PipelineConfigurationObject(
         config: pipelineConfig, // variable provided in binding by JTE
         merge: [],
         override: []
