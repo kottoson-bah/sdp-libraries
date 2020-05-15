@@ -8,13 +8,13 @@ import org.boozallen.plugins.jte.init.dsl.PipelineConfigurationDsl
 
 @Init
 void call(context){
-    TemplateConfigObject aggregated = new TemplateConfigObject(
+    TemplateConfigObject aggregated = new PipelineConfigurationObject(
         config: pipelineConfig, // variable provided in binding by JTE
         merge: [],
         override: []
     )
     node{
-        writeFile text: TemplateConfigDsl.serialize(aggregated), file: "pipeline_config.groovy"
+        writeFile text: PipelineConfigurationDsl.serialize(aggregated), file: "pipeline_config.groovy"
         archiveArtifacts "pipeline_config.groovy"
     }
 }
