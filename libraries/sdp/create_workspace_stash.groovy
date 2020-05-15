@@ -9,8 +9,10 @@ import hudson.AbortException
 void call(context){
     node{
         cleanWs()
-        if (scm) { 
+        if (scm.getClass()) { 
           println "scm exists"
+          println "scm class:"
+          println scm.getClass()
         } else {
           println "scm DOES NOT exist"
         }
