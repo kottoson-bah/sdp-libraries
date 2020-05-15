@@ -9,13 +9,13 @@ import hudson.AbortException
 void call(context){
     node{
         cleanWs()
+        if (scm) { 
+          println "scm exists"
+        } else {
+          println "scm DOES NOT exist"
+        }
         println "about to checkout SCM"
         try{
-          if (scm) { 
-            println "scm exists"
-          } else {
-            println "scm DOES NOT exist"
-          }
           scm.getType()
           checkout scm
           println "checked out SCM"
