@@ -3,8 +3,8 @@
   This software package is licensed under the Booz Allen Public License. The license can be found in the License file or at http://boozallen.github.io/licenses/bapl
 */
 
-import org.boozallen.plugins.jte.config.TemplateConfigObject
-import org.boozallen.plugins.jte.config.TemplateConfigDsl
+import org.boozallen.plugins.jte.init.dslPipelineConfigurationObject
+import org.boozallen.plugins.jte.init.dsl.PipelineConfigurationDsl
 
 @Init
 void call(context){
