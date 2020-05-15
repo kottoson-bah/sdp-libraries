@@ -9,11 +9,15 @@ import hudson.AbortException
 void call(context){
     node{
         cleanWs()
+        println "about to checkout SCM"
         try{
             checkout scm
+            println "checked out SCM"
         }catch(AbortException ex) {
             println "scm var not present, skipping source code checkout" 
         }
+        println "about to create workspace stash"
         stash name: 'workspace', allowEmpty: true, useDefaultExcludes: false
+        println "created workspace stash"
     }
 }
