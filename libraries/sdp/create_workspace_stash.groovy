@@ -11,8 +11,9 @@ void call(context){
         cleanWs()
         println "about to checkout SCM"
         try{
-            checkout scm
-            println "checked out SCM"
+          scm.getType()
+          checkout scm
+          println "checked out SCM"
         }catch(AbortException ex) {
             println "scm var not present, skipping source code checkout" 
         }
